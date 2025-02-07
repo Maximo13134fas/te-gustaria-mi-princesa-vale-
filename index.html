@@ -23,7 +23,7 @@
             color: #ff1493;
             font-size: 3em;
             animation: float 12s infinite ease-in-out;
-            pointer-events: none; /* Para que no interfiera con el resto del contenido */
+            pointer-events: none;
         }
 
         @keyframes float {
@@ -38,6 +38,9 @@
             padding: 20px;
             border-radius: 15px;
             display: inline-block;
+            max-width: 90%; /* Agrega un límite en el tamaño */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
@@ -56,12 +59,13 @@
         }
 
         .buttons button {
-            font-size: 1.2em;
-            padding: 10px 20px;
+            font-size: 1.5em;
+            padding: 15px 30px;
             margin: 10px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 80%; /* Hacer los botones más grandes */
         }
 
         #yes {
@@ -83,6 +87,27 @@
             color: #ff1493;
             font-weight: bold;
             margin-top: 20px;
+        }
+
+        /* Estilo para móviles */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            .container {
+                padding: 15px;
+            }
+            .buttons button {
+                font-size: 1.2em;
+                padding: 12px 25px;
+                width: 90%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
